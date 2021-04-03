@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loops | Javascript</title>
+</head>
+<body>
+    
+    <!--Simple Number Guess Game-->
+    <p>How many fingers an I holding up?</p>
+    <p>
+        <select id="myNumber">
+            <option>0</option> 
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select> 
+        <button id="checkGuess">Guess</button>
+    </p>
+
+    <script type="text/javascript">
+        //checkGuess button
+        document.getElementById("checkGuess").onclick = function() {
+            //id myNumber
+            var myNumber = document.getElementById("myNumber").value;
+            var gotIt = false;
+            var numberOfGuesses = 1;
+
+            //while loop
+            while (gotIt == false) {
+                var guess = Math.random();
+                guess = guess * 6;
+                guess = Math.floor(guess);
+
+                if(guess == myNumber){
+                    //computer is correct
+                    gotIt = true;
+                    alert("Got It! It was a " + guess + ". It took me " + numberOfGuesses + " guesses");
+                } else{
+                    //computer is wrong
+                    numberOfGuesses++;
+                }
+            }
+            
+        }
+    </script>
+</body>
+</html>

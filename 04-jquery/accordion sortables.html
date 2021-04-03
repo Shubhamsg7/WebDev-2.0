@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  </head>
+  <body>
+    <!--accordion-->
+    <div id="accordion">
+        <h3>Title 1</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis repudiandae temporibus esse assumenda quaerat odit placeat repellendus nihil perferendis. Error eius deserunt ipsam dolorem voluptatem explicabo minima ducimus dolore.
+            </p>
+        </div>
+
+        <h3>Title 2</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis repudiandae temporibus esse assumenda quaerat odit placeat repellendus nihil perferendis. Error eius deserunt ipsam dolorem voluptatem explicabo minima ducimus dolore.
+            </p>
+        </div>
+
+        <h3>Title 3</h3>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad debitis repudiandae temporibus esse assumenda quaerat odit placeat repellendus nihil perferendis. Error eius deserunt ipsam dolorem voluptatem explicabo minima ducimus dolore.
+            </p>
+        </div>
+    </div>
+
+    <!--sortable-->
+    <ul id="sortable">        
+        <li>Rob</li>       
+        <li>Kirsten</li>        
+        <li>Tommy</li>        
+        <li>Ralphie</li>       
+    </ul>
+    
+
+    <script>
+        //accordion
+        $( "#accordion" ).accordion();
+        //sortable
+        $("#sortable").sortable();
+    </script>
+  </body>
+</html>

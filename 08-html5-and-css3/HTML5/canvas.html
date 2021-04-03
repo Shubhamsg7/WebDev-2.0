@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <style>
+        #myCanvas{
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="400">
+        please upgrade your browser
+    </canvas>
+
+    <!--script-->
+    <script>
+        var myCanvas = document.getElementById("myCanvas");
+        var context = myCanvas.getContext("2d");
+
+        //gradient
+        var gradient = context.createLinearGradient(150,100,350,300);
+        gradient.addColorStop(0, "white");
+        gradient.addColorStop(1, "#49c900");
+
+        //box
+        context.fillStyle = gradient;
+        context.fillRect(150, 100, 200, 200);
+
+        context.moveTo(150, 100);
+        context.lineTo(350, 300);
+
+        context.moveTo(150, 300);
+        context.lineTo(350, 100);
+
+        context.strokeStyle = "#f42924";
+        context.stroke();
+        
+        //arc
+        context.beginPath();
+        context.arc(100, 100, 50, Math.PI, 2+Math.PI * 3/4);
+        context.stroke();
+
+        //text
+        //text gradient
+        textGradient = context.createLinearGradient(200,50,300,50);
+        textGradient.addColorStop(0, "red");
+        textGradient.addColorStop(1, "yellow");
+
+        context.fillStyle = textGradient;
+        context.font = "20px Arial";
+        context.fillText("My Canvas", 200, 50);
+
+
+    </script>
+</body>
+</html>

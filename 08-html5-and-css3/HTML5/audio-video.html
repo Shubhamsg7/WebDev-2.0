@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and Video</title>
+</head>
+<body>
+    <!--video-->
+    <video width="320" height="240" id="video" controls>
+        <source src="video/video.mp4" type="video/mp4">
+        please upgrade your browser
+    </video>
+
+    <button id="play">Play</button>
+
+
+    <!--audio-->
+    <audio controls>
+        <source src="audio/audio.mp3" type="audio/mpeg">
+        please upgrade your browser
+    </audio>
+
+    <!--script-->
+    <script>
+        document.getElementById("play").onclick = function(){
+            if(document.getElementById("video").paused){
+                document.getElementById("video").play();
+                this.innerHTMl = "Pause";
+            }else{
+                document.getElementById("video").pause();
+                this.innerHTMl = "Play";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <style>
+        #circle{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 10px;
+        }
+
+        .square{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="text">This is some text!</p>
+    <button id="toggle">Toggle Text</button>
+    
+    
+    <script>
+        var textShowing = true;
+
+        $("#toggle").click(function() {
+
+            if(textShowing){
+                $("#text").fadeOut(function(){
+                    textShowing = false;
+                });
+            }else{
+                $("#text").fadeIn(function(){
+                    textShowing = true;
+                });
+            }
+            
+        });
+
+    </script>
+</body>
+</html>

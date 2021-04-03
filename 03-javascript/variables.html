@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <input type="text" id="txtInput">
+    <button id="txtChanger">Change the text!</button>
+    <p id="text">This is some text</p>
+    
+    <script type="text/javascript">
+        document.getElementById("txtChanger").onclick = function() {
+
+            var txtEntered = "";
+            txtEntered = document.getElementById("txtInput").value;
+            document.getElementById("text").innerHTML = txtEntered;
+        }
+    </script>
+</body>
+</html>

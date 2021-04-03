@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage With Style</title>
+    <style>
+        .red{
+            color: red;
+        }
+
+         #green{
+            color: green;
+        }
+
+        .underlined{
+            text-decoration: underline;
+        }
+        
+        #first-section{
+            color: blue;
+            background-color: #cef6ce;
+            width: 200px;
+            padding: 100px 50px 20px 10px;
+        }
+
+        #second-section{
+            background-color: #8ab4f7;
+            width: 400px;  
+            padding: 50px 20px;   
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--first section-->
+    <div id="first-section">
+        <p>The quick brown fox jumped over the lazy dog.</p>
+
+        <p>Wow, I love internal CSS!</p>
+    </div>
+    
+    <!--second section-->
+    <div id="second-section">
+        <p id="green">This is some more text. <span class="underlined">And this text is underlined.</span></p>
+        
+        <h1 class="red">CSS is cool!</h1>
+    </div>
+
+    <!--clear float-->
+    <div class="clear-float">
+        <p>This paragraph is not floated.</p>
+    </div>
+       
+</body>
+</html>

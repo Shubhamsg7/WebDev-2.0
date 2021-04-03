@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+        #draggable{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #droppable{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <!--draggable box-->
+    <div id="draggable"></div>
+    <!--droppable box-->
+    <div id="droppable"></div>
+
+    <script>
+
+        //draggable
+        $( "#draggable" ).draggable();
+
+        //droppable
+        $("#droppable").droppable({
+            drop: function(event, ui){
+                alert("Dropped!");
+            }
+        });
+
+    </script>
+  </body>
+</html>

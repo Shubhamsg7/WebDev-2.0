@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style type="text/css">
+        .circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            float: left;
+            margin: 50px;
+        }
+
+        #red-circle{
+            background-color: red;
+        }
+
+        #blue-circle{
+            background-color: blue;
+        }
+
+        #yellow-circle{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="circle" id="red-circle"></div>
+    <div class="circle" id="blue-circle"></div>
+    <div class="circle" id="yellow-circle"></div>
+
+    <script type="text/javascript">
+        document.getElementById("red-circle").onclick = function() {
+            document.getElementById("red-circle").style.display = "none";
+        }
+    </script>
+</body>
+</html>

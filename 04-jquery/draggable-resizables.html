@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <style>
+        #resizable{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #also{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <!--draggable text-->
+    <div id="draggable">Drag me!</div>
+
+    <!--draggable text in box-->
+    <div style="width: 400px; height: 300px;background-color: yellow;">
+        <span>I'm stuck in the box!</span>
+    </div>
+
+    <!--resizable box-->
+    <div id="resizable"></div>
+    <div id="also"></div>
+
+    <script>
+        $( "#draggable" ).draggable({axis: "x"});
+
+        $("span").draggable({containment: "parent"});
+
+        $("#resizable").resizable({
+            grid:50,
+            alsoResize: "#also",
+            resize: function(event, ui){
+                if($("#resizable").width() > 300){
+                    alert("big enough")
+                }
+            }
+        });
+
+        $("#also").resizable();
+
+    </script>
+  </body>
+</html>

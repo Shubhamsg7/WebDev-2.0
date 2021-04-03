@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <style>
+        #multi-column{
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+
+            -webkit-column-gap: 40px;
+            -moz-column-gap: 40px;
+            column-gap: 40px;
+
+            -webkit-column-rule-style: solid;
+            -moz-column-rule-style: solid;
+            column-rule-style: solid;
+
+            -webkit-column-rule-width: 1px;
+            -moz-column-rule-width: 1px;
+            column-rule-width: 1px;
+
+            -webkit-column-rule-color: grey;
+            -moz-column-rule-color: grey;
+            column-rule-color: grey;
+        }
+
+        h2{
+            -webkit-column-span: all;
+            -moz-column-span: all;
+            column-span: all;
+        }
+
+        header{
+            width: 100%;
+            height: 50px;
+            background: grey;
+        }
+
+        #container{
+            width: 100%;
+            background-color: yellow;
+            height: -webkit-calc(100% - 50px);
+            height: calc(100% - 50px);
+            position: absolute;
+        }
+
+        body{
+            margin: 0;
+        }
+        .flexbox-container{
+            display: flex;
+            display: -webkit-flex;
+            width: 100%;
+            height: 500px;
+            background-color: aqua;
+            flex-wrap: wrap;
+            /* -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse; */
+        }
+
+        .flexbox-item{
+            background-color: bisque;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div id="container">
+        <div class="flexbox-container">
+            <div class="flexbox-item">Item 1</div>
+            <div class="flexbox-item">Item 2</div>
+            <div class="flexbox-item" style="border: 2px solid black;">Item 3</div>
+            <div class="flexbox-item">Item 4</div>
+            <div class="flexbox-item">Item 5</div>
+            <div class="flexbox-item">Item 6</div>
+            <div class="flexbox-item">Item 7</div>
+            <div class="flexbox-item">Item 8</div>
+        </div>
+    </div>
+
+    <!--layouts-->
+    <div id="multi-column">
+        <h2>News</h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum faucibus orci, vitae maximus justo iaculis a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor mi turpis, eu molestie leo pretium facilisis. Nunc tempor sollicitudin nisl vel egestas. Aliquam congue lectus tellus, tristique euismod dolor consequat at. Suspendisse lobortis tortor vitae cursus tincidunt. Etiam euismod malesuada cursus. Proin eu suscipit massa.<br><br>
+
+        Morbi tempor ipsum a lorem varius viverra. Nullam purus ex, malesuada eget varius at, sagittis vel lacus. Fusce lacinia sollicitudin justo ac commodo. Aliquam varius, nunc fringilla volutpat consequat, tellus felis consectetur est, quis molestie est neque eget urna. Sed sapien lacus, congue eget neque sed, tempor pulvinar justo. Aliquam maximus gravida tempor. Integer malesuada mollis mattis. Morbi ullamcorper posuere sagittis. Fusce sit amet augue id diam tristique hendrerit. Nullam et ornare turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas in egestas ex. Praesent bibendum lacinia purus, et ornare leo imperdiet vitae. Sed nec nisl fringilla, tempor dolor in, tristique lorem.<br><br>
+
+        Nam quis malesuada nunc. Maecenas malesuada vulputate dignissim. Nam quam leo, porta sit amet consectetur mattis, fermentum sit amet libero. Phasellus a cursus magna. Curabitur a leo massa. Pellentesque eget ex id tortor consequat imperdiet sit amet ut dolor. Curabitur at molestie nisl. Ut vulputate consequat ex vitae vulputate. Vestibulum sit amet ipsum auctor, sagittis nunc at, euismod dolor. Sed sed ex tellus. Curabitur ultrices metus non maximus faucibus. Etiam ultrices odio sollicitudin fermentum iaculis. Nunc justo ipsum, ornare eget placerat quis, dapibus sit amet ante. Curabitur at sagittis turpis. Duis fringilla mollis sagittis.<br><br>
+
+        Phasellus rhoncus tortor et lobortis semper. Maecenas efficitur risus sit amet odio mattis, eget venenatis dolor ultricies. Sed non tempor risus. Praesent rutrum lorem vel posuere posuere. Nulla facilisi. Aliquam erat volutpat. Pellentesque libero dui, iaculis quis lacus vel, volutpat vulputate lacus. Phasellus mollis dui in dolor rutrum, vel varius nisi rhoncus. Nunc lobortis eros vitae magna sagittis hendrerit. In vel aliquet massa. Nulla tincidunt arcu ac mauris commodo aliquet. Cras ut laoreet eros. Mauris et blandit tortor. Vivamus ornare lorem ut nulla malesuada pretium. Fusce vel enim sed mi hendrerit gravida. Etiam aliquam posuere lorem non viverra.<br><br>
+
+        Sed mollis, dolor ut consectetur tempor, sem velit scelerisque dolor, sed vehicula ipsum lacus aliquet dolor. Sed bibendum sit amet nibh at mattis. Phasellus erat purus, molestie id rhoncus et, auctor eu metus. Duis auctor velit in enim consectetur, in dictum justo sollicitudin. Quisque pulvinar nunc sed lorem blandit posuere a non quam. Vestibulum ante metus, luctus ac feugiat ac, semper faucibus nisl. Pellentesque luctus, arcu nec laoreet consectetur, mauris elit vulputate dolor, quis laoreet neque orci sed dolor. Ut vulputate feugiat urna. In interdum tempus aliquam. Nullam vitae condimentum mauris. Phasellus commodo ultricies euismod. Cras eleifend elementum dolor, in pretium ante tincidunt varius. Mauris vehicula leo dapibus neque interdum, vel pulvinar purus tempus. Fusce gravida viverra augue quis rhoncus.<br><br>
+    </div>
+</body>
+</html>
