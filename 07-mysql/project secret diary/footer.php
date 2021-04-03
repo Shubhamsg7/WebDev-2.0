@@ -11,7 +11,8 @@
             $.ajax({
                 method: "POST",
                 url: "updateDatabase.php",
-                data: {content: $("#diary").val()}
+                data: { content: $("#diary").val
+                () }
             });
         });
     </script>

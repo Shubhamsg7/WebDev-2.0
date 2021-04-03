@@ -3,7 +3,7 @@
 
     //$diaryContent="";
 
-    if(array_key_exists("id", $_COOKIE)){
+    if(array_key_exists("id", $_COOKIE) && $_COOKIE ['id']){
         $_SESSION['id'] = $_COOKIE['id'];
 
     }
@@ -11,8 +11,8 @@
     if(array_key_exists("id", $_SESSION)){
         //echo "<p>Logged In! <a href='index.php?logout=1'>Log Out</a></p>";
         include('connection.php');
-        $query = "SELECT diary FROM users WHERE id = ".mysqli_real_escape_string($link, $_SESSION['id'])." LIMIT 1";
 
+        $query = "SELECT diary FROM users WHERE id = ".mysqli_real_escape_string($link, $_SESSION['id'])." LIMIT 1";
         $row = mysqli_fetch_array(mysqli_query($link, $query));
 
         $diaryContent = $row['diary'];
@@ -30,7 +30,7 @@
             </div>
     </nav>
 
-    <div class="container-fluid p-3">
+    <div class="container-fluid p-3 mt-5">
         <div class="">
             <textarea class="form-control" id="diary" rows="20"><?php echo $diaryContent; ?></textarea>
         </div>
